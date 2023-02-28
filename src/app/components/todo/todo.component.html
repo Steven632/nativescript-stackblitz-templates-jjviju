@@ -1,0 +1,13 @@
+<ActionBar title="To Do"></ActionBar>
+<GridLayout rows="*, *" colums="*">
+  <ListView row="0" col="0" [items]="todoListFinal" class="List-group">
+    <ng-template let-item="item" let-i="index" let-odd="odd" let-even="even">
+      <StackLayout>
+        <Label [text]="item.description" class="list-group-item"></Label>
+        <Label [text]="item.status" class="list-group-item"></Label>
+      </StackLayout>
+    </ng-template>
+  </ListView>
+
+  <Button row="1" col="0" text="Añadir to do" (tap)="addTodo()"></Button>
+</GridLayout>
